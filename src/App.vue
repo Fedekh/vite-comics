@@ -1,22 +1,25 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppContent from "./components/AppContent.vue";
+import AppFooter from "./components/AppFooter.vue";
+
 
 export default {
     components:{
         AppHeader,
-        AppContent
+        AppContent,
+        AppFooter
 
     }
 }
 </script>
 
 <template>
-  <div class="container">
-    <div class="wrapper">
+  <div class="main-container">
+    <div class="main-wrapper">
       <AppHeader/>
       <AppContent/>
-
+      <AppFooter/>
     </div>
   </div>
   </template>
@@ -30,7 +33,6 @@ body{
   .container{
     width: 100%;
     height: 100vh;
-    
   }
 }
 
