@@ -8,12 +8,29 @@ export default {
 </script>
 
 <template>
-  <AppHeader/>
-</template>
+  <div class="container">
+    <div class="wrapper">
+      <AppHeader/>
+    </div>
+  </div>
+  </template>
 
 
 <style lang="scss">
 @use "./style/general.scss" as *;
+
+body{
+  background-color: rgb(114, 113, 116);
+  .container{
+    width: 100%;
+    height: 100vh;
+    .wrapper{
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
 
 </style>
 
