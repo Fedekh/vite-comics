@@ -61,14 +61,17 @@ export default {
 </script>
 
 <template>
-    <header>
-        <div class="logo"><img src="../assets/img/dc-logo.png" alt=""></div>
-        <nav>
-            <ul>
-                <li v-for="link in links"><a href="">{{ link.text }}</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container-header">
+        <header>
+            <div class="logo"><a href=""><img src="../assets/img/dc-logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li v-for="link in links"><a href="">{{ link.text }}</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 </template>
 
 
@@ -76,20 +79,36 @@ export default {
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
-header{
-    width: 100%;
-    @include flex(row,space-between,center);  
-    background-color: white; 
-    ul {
-        list-style-type: none; 
-        @include flex(row,center,center);      
-        gap: 10px; 
-        li {
-            font-size: 12px;
-            
-            a {
-                text-decoration: none;
-                color: black;
+
+.container-header {
+    background-color: white;
+
+    header {
+        width: 80%;
+        height: 120px;
+        margin: 0 auto;
+
+        @include flex(row, space-between, center);
+
+        ul {
+            list-style-type: none;
+            @include flex(row, center, center);
+            gap: 10px;
+
+            li {
+                font-size: 12px;
+                line-height: 120px;
+                &:hover{
+                        border-bottom: 5px solid $features;
+                    }
+                
+                a {
+                    text-decoration: none;
+                    color: $textcolor;
+                    &:hover{
+                        color: $features;
+                    }
+                }
             }
         }
     }
