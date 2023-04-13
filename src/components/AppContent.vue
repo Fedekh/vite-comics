@@ -20,14 +20,13 @@ export default {
 @use "../style/partials/variables" as *;
 
 .wrapper-title {
-    height: 120px;
+    height: 100px;
     width: 100%;
     background-color: $mainblack;
     color: white;
     .title{
-        @include ms_container(120px, 0 auto);
+        @include ms_container(100px, 0 auto);
         @include flex(row, flex-start, center);
-
     }
 
 }

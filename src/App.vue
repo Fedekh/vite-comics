@@ -2,13 +2,15 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppContent from "./components/AppContent.vue";
 import AppFooter from "./components/AppFooter.vue";
+import AppFeatures from "./components/AppFeatures.vue";
 
 
 export default {
     components:{
         AppHeader,
         AppContent,
-        AppFooter
+        AppFooter,
+        AppFeatures
 
     }
 }
@@ -19,6 +21,7 @@ export default {
     <div class="main-wrapper">
       <AppHeader/>
       <AppContent/>
+      <AppFeatures/>
       <AppFooter/>
     </div>
   </div>
@@ -29,7 +32,6 @@ export default {
 @use "./style/general.scss" as *;
 
 body{
-  background-color: rgb(93, 92, 95);
   .container{
     width: 100%;
     height: 100vh;
