@@ -5,8 +5,8 @@
     align-items: $align-items;
   }
   
-@mixin ms_container {
-    width: 80%;
-    height: 120px;
-    margin: 0 auto;
+@mixin ms_container($height,$margin,$width:1000px) {
+  height: $height;
+  margin: $margin;
+  max-width: $width;
 }

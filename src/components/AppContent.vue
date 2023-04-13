@@ -7,9 +7,10 @@ export default {
 </script>
 
 <template>
-    <div class="container-content">
-
-        <h1>CONTENT GOES HERE</h1>
+    <div class="wrapper-title">
+        <section class="title">
+            <h1>CONTENT GOES HERE</h1>
+        </section>
     </div>
 </template>
 
@@ -18,12 +19,17 @@ export default {
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
-.container-content{
-    background-color: $textcolor;
+.wrapper-title {
     height: 120px;
-    @include flex(row, flex-start, center);
-    h1{
-        @include ms_container;
+    width: 100%;
+    background-color: $mainblack;
+    color: white;
+    .title{
+        @include ms_container(120px, 0 auto);
+        @include flex(row, flex-start, center);
+
     }
+
+
 }
 </style>

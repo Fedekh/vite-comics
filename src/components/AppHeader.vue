@@ -84,8 +84,7 @@ export default {
     background-color: white;
 
     header {
-        @include ms_container;
-
+        @include ms_container(120px, 0 auto);
         @include flex(row, space-between, center);
 
         ul {
@@ -96,16 +95,24 @@ export default {
             li {
                 font-size: 12px;
                 line-height: 120px;
-                &:hover{
-                        border-bottom: 5px solid $features;
+                position: relative;
+
+                &:hover {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        border-bottom: 3px solid $mainblu;
                     }
-                
+                    a {
+                        color: $mainblu;
+                    }
+                }
                 a {
                     text-decoration: none;
-                    color: $textcolor;
-                    &:hover{
-                        color: $features;
-                    }
+                    color: $mainblack;
                 }
             }
         }
