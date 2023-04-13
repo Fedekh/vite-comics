@@ -20,7 +20,7 @@ export default {
 @use "./style/general.scss" as *;
 
 body{
-  background-color: rgb(114, 113, 116);
+  background-color: rgb(93, 92, 95);
   .container{
     width: 100%;
     height: 100vh;
