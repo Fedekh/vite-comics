@@ -5,3 +5,8 @@
     align-items: $align-items;
   }
   
+@mixin ms_container {
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+}

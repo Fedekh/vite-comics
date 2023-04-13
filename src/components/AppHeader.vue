@@ -84,9 +84,7 @@ export default {
     background-color: white;
 
     header {
-        width: 80%;
-        height: 120px;
-        margin: 0 auto;
+        @include ms_container;
 
         @include flex(row, space-between, center);
 
