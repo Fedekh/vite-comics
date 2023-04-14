@@ -188,13 +188,16 @@ export default {
         
         width: 100%;
         height: 450px;
-        background-image: url(../assets/img/dc-logo-bg.png), url(../assets/img/footer-bg.jpg);
-        background-position: center right, center center;
-        background-repeat: no-repeat, repeat;
-        background-size: 1, cover;
+        background-image: url(../assets/img/footer-bg.jpg);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: cover;
 
         .link {
             @include ms_container(100%, 0 auto);
+
+            background: url(../assets/img/dc-logo-bg.png)  center right no-repeat;
+            background-size: 50%;
 
             .main-list {
                 padding-top: 50px;

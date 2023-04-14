@@ -96,7 +96,7 @@ export default {
         <section class="locandine">
             <h3 class="title">CURRENT SERIES</h3>
             <AppLocandine v-for="(elemento, index) in locandine" :key="index" :immagine="elemento.thumb"
-                :prezzo="elemento.price" :tipo="elemento.type" />
+                :prezzo="elemento.price" :tipo="elemento.series" />
             <button>LOAD MORE</button>
         </section>
     </div>
@@ -136,6 +136,8 @@ export default {
             background-color: $mainblu;
             padding: 10px 15px;
             position: absolute;
+            border-radius: 20px;
+            border: none;
             top: -22px;
             left: 0;
 
@@ -144,7 +146,9 @@ export default {
         button {
             background-color:$mainblu;
             color: white;
+            margin-top: 30px;
             padding: 10px 30px;
+            border-radius: 20px;
             border: none;
             font-size: 16px;
             cursor: pointer;
