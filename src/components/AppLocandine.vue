@@ -33,7 +33,7 @@ export default {
     width: calc(100% / 6 - 10px);
     margin: 5px;
     padding: 10px;
-    background-color: rgb(70, 141, 61);
+    background-color: rgba(93, 138, 146, 0.397);
     border-radius: 20px;
     position: relative;
     cursor: pointer;
@@ -48,6 +48,7 @@ export default {
     }
     h5{
         bottom: 10px;
+        color: rgb(21, 255, 0);
 
     }
 }   

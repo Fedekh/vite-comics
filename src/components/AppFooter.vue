@@ -239,6 +239,8 @@ export default {
             .sign {
                 padding: 10px;
                 border: 3px solid $mainblu;
+                border-radius: 20px;
+
             }
 
             .cta {

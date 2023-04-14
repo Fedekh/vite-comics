@@ -97,7 +97,7 @@ export default {
             <h3 class="title">CURRENT SERIES</h3>
             <AppLocandine v-for="(elemento, index) in locandine" :key="index" :immagine="elemento.thumb"
                 :prezzo="elemento.price" :tipo="elemento.series" />
-            <button>LOAD MORE</button>
+            <button><a href="">LOAD MORE</a></button>
         </section>
     </div>
 </template>
