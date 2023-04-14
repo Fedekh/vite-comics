@@ -2,6 +2,11 @@
 export default {
     name: "AppFeatures",
     data() {
+    },
+    methods: {
+        getImgPath(name) {
+            return new URL(`../assets/img/${name.img}`, import.meta.url).href;
+        }
     }
 } 
 </script>

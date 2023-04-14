@@ -3,7 +3,7 @@ export default {
     name: "AppFooter",
     data() {
         return {
-            
+
             links: {
                 "DC COMICS": [
                     {
@@ -140,9 +140,10 @@ export default {
     },
     methods: {
         getImgPath(name) {
-            return `../assets/img/${name.img}`;
+            return new URL(`../assets/img/${name.img}`, import.meta.url).href;
         }
-    }
+        
+}
 } 
 </script>
 
@@ -157,60 +158,16 @@ export default {
                             <li v-for="item in elements"><a href="">{{ item.name }}</a></li>
                         </ul>
                     </li>
-                    <!-- <h3>DC COMICS</h3>
-                                <ul>
-                                    <li><a href="">Characters</a></li>
-                                    <li><a href="">Comics</a></li>
-                                    <li><a href="">Movies</a></li>
-                                    <li><a href="">TV</a></li>
-                                    <li><a href="">Games</a></li>
-                                    <li><a href="">Videos</a></li>
-                                    <li><a href="">News</a></li>
-                                </ul> -->
 
-                    <!-- <li class="main-li">
-                                <h3>DC</h3>
-                                <ul>
-                                    <li><a href="">Terms </a></li>
-                                    <li><a href="">Policy </a></li>
-                                    <li><a href="">Choise </a></li>
-                                    <li><a href="">Adv </a></li>
-                                    <li><a href="">Jobs </a></li>
-                                    <li><a href="">Subscription </a></li>
-                                    <li><a href="">Talent Workshop </a></li>
-                                    <li><a href="">Ratings </a></li>
-                                    <li><a href="">Shop </a></li>
-                                    <li><a href="">Contact US </a></li>
-                                </ul>
-                            </li> -->
-
-                    <!-- <li class="main-li">
-                                <h3>SITES</h3>
-                                <ul>
-                                    <li><a href="">Dc</a></li>
-                                    <li><a href="">MAD Magazine</a></li>
-                                    <li><a href="">DC kids</a></li>
-                                    <li><a href="">DC Universe</a></li>
-                                    <li><a href="">DC Powervisa</a></li>
-                                </ul>
-                            </li>
-                            <li  class="main-li shop">
-                                <h3>SHOP</h3>
-                                <ul>
-                                    <li><a href="">DC shop</a></li>
-                                    <li><a href="">Collec</a></li>
-                                </ul>
-                            </li> -->
                 </ul>
             </section>
         </div>
         <div class="footer-bot">
             <div class="bot-list">
-                <a href="">SIGN-UP</a>
+                <a class="sign" href="">SIGN-UP</a>
                 <ul class="cta">
                     <li><a href="">FOLLOW US</a></li>
                     <li v-for="icon in icons"><a :href="icon.url"><img :src="getImgPath(icon)" alt=""></a></li>
-
                 </ul>
             </div>
         </div>
@@ -268,14 +225,21 @@ export default {
     .footer-bot {
         background-color: $footercolor;
         width: 100%;
+        height: calc(100% - 450px);
         color: white;
 
         .bot-list {
             @include ms_container(100%, 0 auto);
             @include flex(row, space-between, center);
 
+            .sign {
+                padding: 10px;
+                border: 1px solid $mainblu;
+            }
+
             .cta {
                 @include flex(row, center, center);
+                color: $mainblu;
 
                 li {
                     width: 50px;
