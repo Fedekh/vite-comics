@@ -185,6 +185,7 @@ export default {
 
 
     .footer-top {
+        
         width: 100%;
         height: 450px;
         background-image: url(../assets/img/dc-logo-bg.png), url(../assets/img/footer-bg.jpg);
@@ -234,16 +235,21 @@ export default {
 
             .sign {
                 padding: 10px;
-                border: 1px solid $mainblu;
+                border: 3px solid $mainblu;
             }
 
             .cta {
                 @include flex(row, center, center);
                 color: $mainblu;
+                gap: 8px;
+                & li:nth-child(1){
+                    width: 100px;
+                    font-weight: bold;
+                }
+               
 
                 li {
                     width: 50px;
-                    height: 50px;
                 }
 
             }
