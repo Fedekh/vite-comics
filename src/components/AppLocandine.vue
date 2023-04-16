@@ -3,8 +3,8 @@ export default {
     name: "AppLocandine",
     props:{
         immagine: String,
-        prezzo: String,
         serie: String,
+        prezzo: String,
         nomefumetto: String
     },
     
@@ -38,8 +38,9 @@ export default {
         height: 70%;
     }
     h4, h5{
-        color: rgb(243, 243, 243);
+        color: rgb(8, 198, 212);
         position: absolute;
+        font-size: .8rem;
         // bottom: 25px;
     }
     h5{

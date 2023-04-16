@@ -95,8 +95,11 @@ export default {
         </section>
         <section class="locandine">
             <h3 class="title">CURRENT SERIES</h3>
-            <AppLocandine v-for="(elemento, index) in locandine" :key="index" :immagine="elemento.thumb"
-                :prezzo="elemento.price" :nomefumetto="elemento.series" />
+            <AppLocandine v-for="(elemento, index) in locandine"
+            :key="index" 
+            :immagine="elemento.thumb"
+            :prezzo="elemento.price"
+            :nomefumetto="elemento.series" />
             <button><a href="">LOAD MORE</a></button>
         </section>
     </div>
@@ -108,7 +111,6 @@ export default {
 @use "../style/partials/variables" as *;
 
 .wrapper-content {
-    // height: 500px;
     width: 100%;
     background-color: $mainblack;
     color: white;
