@@ -5,20 +5,16 @@ export default {
         immagine: String,
         prezzo: String,
         serie: String,
-        tipo: String
+        nomefumetto: String
     },
-    data() {
-        return {
-           
-   
-}}
+    
 } 
 </script>
 
 <template>
     <div class="card">
         <img :src="immagine" :alt="serie">
-        <h4>{{ tipo }}</h4>
+        <h4>{{ nomefumetto }}</h4>
         <h5>{{ prezzo }}</h5>
     </div>
 
