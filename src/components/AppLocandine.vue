@@ -41,6 +41,7 @@ export default {
         color: rgb(8, 198, 212);
         position: absolute;
         font-size: .8rem;
+        vertical-align: middle;
         // bottom: 25px;
     }
     h5{

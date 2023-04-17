@@ -106,10 +106,12 @@ export default {
                         width: 100%;
                         border-bottom: 3px solid $mainblu;
                     }
+
                     a {
                         color: $mainblu;
                     }
                 }
+
                 a {
                     text-decoration: none;
                     color: $mainblack;

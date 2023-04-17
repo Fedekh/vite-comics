@@ -4,41 +4,37 @@ import AppContent from "./components/AppContent.vue";
 import AppFooter from "./components/AppFooter.vue";
 import AppFeatures from "./components/AppFeatures.vue";
 
-
 export default {
-    components:{
-        AppHeader,
-        AppContent,
-        AppFooter,
-        AppFeatures
-
-    }
+  components: {
+    AppHeader,
+    AppContent,
+    AppFooter,
+    AppFeatures
+  }
 }
 </script>
 
 <template>
   <div class="main-container">
     <div class="main-wrapper">
-      <AppHeader/>
-      <AppContent/>
-      <AppFeatures/>
-      <AppFooter/>
+      <AppHeader />
+      <AppContent />
+      <AppFeatures />
+      <AppFooter />
     </div>
   </div>
-  </template>
+</template>
 
 
 <style lang="scss">
 @use "./style/general.scss" as *;
 
-body{
-  .container{
+body {
+  .container {
     width: 100%;
     height: 100vh;
   }
 }
-
-
 </style>
 
 
